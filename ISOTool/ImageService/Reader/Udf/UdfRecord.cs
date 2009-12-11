@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace MicrosoftStore.IsoTool.Service {
+namespace Phrosty.IsoTool.Service {
     internal class UdfRecord : ImageRecord {
         internal int VolumeIndex = -1;
         internal int PartitionIndex = -1;

@@ -2,7 +2,7 @@
 
 using System;
 
-namespace MicrosoftStore.IsoTool.Service {
+namespace Phrosty.IsoTool.Service {
     internal class IcbTag {
         public IcbFileType FileType { get; private set; }
 

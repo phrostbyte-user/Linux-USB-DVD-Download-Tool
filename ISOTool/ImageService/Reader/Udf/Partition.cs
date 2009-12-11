@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-namespace MicrosoftStore.IsoTool.Service {
+namespace Phrosty.IsoTool.Service {
     internal class Partition {
         public int Number { get; set; }
 

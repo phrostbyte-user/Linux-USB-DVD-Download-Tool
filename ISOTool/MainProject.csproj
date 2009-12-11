@@ -8,8 +8,8 @@
     <ProjectGuid>{18DD7489-77D0-43D4-B7B1-672BDD804E2C}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MicrosoftStore.IsoTool</RootNamespace>
-    <AssemblyName>Windows7-USB-DVD-Download-Tool</AssemblyName>
+    <RootNamespace>Phrosty.IsoTool</RootNamespace>
+    <AssemblyName>Linux USB-DVD Download Tool</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkSubset>

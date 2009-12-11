@@ -14,7 +14,7 @@
 //     51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 // </copyright>
 
-namespace MicrosoftStore.IsoTool
+namespace Phrosty.IsoTool
 {
     partial class MainForm
     {
@@ -47,41 +47,41 @@ namespace MicrosoftStore.IsoTool
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.openFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.panUsbScreen = new System.Windows.Forms.Panel();
-            this.btnUsbStartOver = new MicrosoftStore.IsoTool.ImageButton();
+            this.btnUsbStartOver = new Phrosty.IsoTool.ImageButton();
             this.cmbUsbDevice = new System.Windows.Forms.ComboBox();
-            this.btnRefresh = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnCopy = new MicrosoftStore.IsoTool.ImageButton();
+            this.btnRefresh = new Phrosty.IsoTool.ImageButton();
+            this.btnCopy = new Phrosty.IsoTool.ImageButton();
             this.lblUsbMessage = new System.Windows.Forms.Label();
             this.txtSource = new System.Windows.Forms.TextBox();
             this.lblSource = new System.Windows.Forms.Label();
             this.panMainScreen = new System.Windows.Forms.Panel();
-            this.btnBrowse = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnNext = new MicrosoftStore.IsoTool.ImageButton();
+            this.btnBrowse = new Phrosty.IsoTool.ImageButton();
+            this.btnNext = new Phrosty.IsoTool.ImageButton();
             this.lblScreenTitle = new System.Windows.Forms.Label();
             this.panBackup = new System.Windows.Forms.Panel();
-            this.progressBar = new MicrosoftStore.IsoTool.ProgressBar();
-            this.btnCancel = new MicrosoftStore.IsoTool.ImageButton();
+            this.progressBar = new Phrosty.IsoTool.ProgressBar();
+            this.btnCancel = new Phrosty.IsoTool.ImageButton();
             this.lblStatus = new System.Windows.Forms.Label();
-            this.btnBackupStartOver = new MicrosoftStore.IsoTool.ImageButton();
+            this.btnBackupStartOver = new Phrosty.IsoTool.ImageButton();
             this.lblPercentComplete = new System.Windows.Forms.Label();
             this.lblStatusMessage = new System.Windows.Forms.Label();
             this.panDvdScreen = new System.Windows.Forms.Panel();
-            this.btnDvdStartOver = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnDvdBegin = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnRetry = new MicrosoftStore.IsoTool.ImageButton();
+            this.btnDvdStartOver = new Phrosty.IsoTool.ImageButton();
+            this.btnDvdBegin = new Phrosty.IsoTool.ImageButton();
+            this.btnRetry = new Phrosty.IsoTool.ImageButton();
             this.lblDvdMessage = new System.Windows.Forms.Label();
             this.lnkTermsOfUse = new System.Windows.Forms.LinkLabel();
             this.lnkHelp = new System.Windows.Forms.LinkLabel();
             this.lblPipe = new System.Windows.Forms.Label();
             this.panMediaTypeScreen = new System.Windows.Forms.Panel();
             this.lblMediaTypeMessage = new System.Windows.Forms.Label();
-            this.btnMediaStartOver = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnDvdMedia = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnUsbMedia = new MicrosoftStore.IsoTool.ImageButton();
+            this.btnMediaStartOver = new Phrosty.IsoTool.ImageButton();
+            this.btnDvdMedia = new Phrosty.IsoTool.ImageButton();
+            this.btnUsbMedia = new Phrosty.IsoTool.ImageButton();
             this.imgMediaImage = new System.Windows.Forms.PictureBox();
-            this.btnMinimize = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnClose = new MicrosoftStore.IsoTool.ImageButton();
-            this.btnBeginBackup = new MicrosoftStore.IsoTool.ImageButton();
+            this.btnMinimize = new Phrosty.IsoTool.ImageButton();
+            this.btnClose = new Phrosty.IsoTool.ImageButton();
+            this.btnBeginBackup = new Phrosty.IsoTool.ImageButton();
             this.panUsbScreen.SuspendLayout();
             this.panMainScreen.SuspendLayout();
             this.panBackup.SuspendLayout();
@@ -111,7 +111,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnUsbStartOver, "btnUsbStartOver");
             this.btnUsbStartOver.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnUsbStartOver.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsbStartOver.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.StartOverButton;
+            this.btnUsbStartOver.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.StartOverButton;
             this.btnUsbStartOver.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnUsbStartOver.Name = "btnUsbStartOver";
             this.btnUsbStartOver.UseVisualStyleBackColor = false;
@@ -130,7 +130,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnRefresh, "btnRefresh");
             this.btnRefresh.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnRefresh.BackColor = System.Drawing.Color.Transparent;
-            this.btnRefresh.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.RefreshButton;
+            this.btnRefresh.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.RefreshButton;
             this.btnRefresh.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnRefresh.Name = "btnRefresh";
             this.btnRefresh.UseVisualStyleBackColor = false;
@@ -141,7 +141,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnCopy, "btnCopy");
             this.btnCopy.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCopy.BackColor = System.Drawing.Color.Transparent;
-            this.btnCopy.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.BeginCopyingButton;
+            this.btnCopy.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.BeginCopyingButton;
             this.btnCopy.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnCopy.Name = "btnCopy";
             this.btnCopy.UseVisualStyleBackColor = false;
@@ -182,7 +182,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnBrowse, "btnBrowse");
             this.btnBrowse.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnBrowse.BackColor = System.Drawing.Color.Transparent;
-            this.btnBrowse.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.BrowseButton;
+            this.btnBrowse.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.BrowseButton;
             this.btnBrowse.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnBrowse.Name = "btnBrowse";
             this.btnBrowse.UseVisualStyleBackColor = false;
@@ -193,7 +193,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnNext, "btnNext");
             this.btnNext.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnNext.BackColor = System.Drawing.Color.Transparent;
-            this.btnNext.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.NextButton;
+            this.btnNext.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.NextButton;
             this.btnNext.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnNext.Name = "btnNext";
             this.btnNext.UseVisualStyleBackColor = false;
@@ -224,7 +224,7 @@ namespace MicrosoftStore.IsoTool
             this.progressBar.AccessibleRole = System.Windows.Forms.AccessibleRole.ProgressBar;
             this.progressBar.BackColor = System.Drawing.Color.Transparent;
             this.progressBar.Name = "progressBar";
-            this.progressBar.ProgressImage = global::MicrosoftStore.IsoTool.Properties.Resources.MasterSprite;
+            this.progressBar.ProgressImage = global::Phrosty.IsoTool.Properties.Resources.MasterSprite;
             this.progressBar.ProgressImageOffset = new System.Drawing.Point(592, 288);
             this.progressBar.Value = 0;
             // 
@@ -233,7 +233,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnCancel, "btnCancel");
             this.btnCancel.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
-            this.btnCancel.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.CancelButton;
+            this.btnCancel.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.CancelButton;
             this.btnCancel.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.UseVisualStyleBackColor = false;
@@ -250,7 +250,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnBackupStartOver, "btnBackupStartOver");
             this.btnBackupStartOver.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnBackupStartOver.BackColor = System.Drawing.Color.Transparent;
-            this.btnBackupStartOver.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.StartOverButton;
+            this.btnBackupStartOver.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.StartOverButton;
             this.btnBackupStartOver.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnBackupStartOver.Name = "btnBackupStartOver";
             this.btnBackupStartOver.UseVisualStyleBackColor = false;
@@ -283,7 +283,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnDvdStartOver, "btnDvdStartOver");
             this.btnDvdStartOver.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDvdStartOver.BackColor = System.Drawing.Color.Transparent;
-            this.btnDvdStartOver.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.StartOverButton;
+            this.btnDvdStartOver.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.StartOverButton;
             this.btnDvdStartOver.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnDvdStartOver.Name = "btnDvdStartOver";
             this.btnDvdStartOver.UseVisualStyleBackColor = false;
@@ -294,7 +294,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnDvdBegin, "btnDvdBegin");
             this.btnDvdBegin.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDvdBegin.BackColor = System.Drawing.Color.Transparent;
-            this.btnDvdBegin.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.BeginBurningButton;
+            this.btnDvdBegin.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.BeginBurningButton;
             this.btnDvdBegin.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnDvdBegin.Name = "btnDvdBegin";
             this.btnDvdBegin.UseVisualStyleBackColor = false;
@@ -304,7 +304,7 @@ namespace MicrosoftStore.IsoTool
             // 
             resources.ApplyResources(this.btnRetry, "btnRetry");
             this.btnRetry.BackColor = System.Drawing.Color.Transparent;
-            this.btnRetry.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.TryAgainButton;
+            this.btnRetry.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.TryAgainButton;
             this.btnRetry.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnRetry.Name = "btnRetry";
             this.btnRetry.UseVisualStyleBackColor = false;
@@ -369,7 +369,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnMediaStartOver, "btnMediaStartOver");
             this.btnMediaStartOver.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnMediaStartOver.BackColor = System.Drawing.Color.Transparent;
-            this.btnMediaStartOver.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.StartOverButton;
+            this.btnMediaStartOver.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.StartOverButton;
             this.btnMediaStartOver.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnMediaStartOver.Name = "btnMediaStartOver";
             this.btnMediaStartOver.UseVisualStyleBackColor = false;
@@ -380,7 +380,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnDvdMedia, "btnDvdMedia");
             this.btnDvdMedia.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnDvdMedia.BackColor = System.Drawing.Color.Transparent;
-            this.btnDvdMedia.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.DvdButton;
+            this.btnDvdMedia.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.DvdButton;
             this.btnDvdMedia.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnDvdMedia.Name = "btnDvdMedia";
             this.btnDvdMedia.UseVisualStyleBackColor = false;
@@ -391,7 +391,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnUsbMedia, "btnUsbMedia");
             this.btnUsbMedia.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnUsbMedia.BackColor = System.Drawing.Color.Transparent;
-            this.btnUsbMedia.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.UsbButton;
+            this.btnUsbMedia.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.UsbButton;
             this.btnUsbMedia.ButtonImageOffset = new System.Drawing.Point(0, 0);
             this.btnUsbMedia.Name = "btnUsbMedia";
             this.btnUsbMedia.UseVisualStyleBackColor = false;
@@ -401,7 +401,7 @@ namespace MicrosoftStore.IsoTool
             // 
             this.imgMediaImage.BackColor = System.Drawing.Color.Transparent;
             this.imgMediaImage.ErrorImage = null;
-            this.imgMediaImage.Image = global::MicrosoftStore.IsoTool.Properties.Resources.DvdImage;
+            this.imgMediaImage.Image = global::Phrosty.IsoTool.Properties.Resources.DvdImage;
             resources.ApplyResources(this.imgMediaImage, "imgMediaImage");
             this.imgMediaImage.InitialImage = null;
             this.imgMediaImage.Name = "imgMediaImage";
@@ -412,7 +412,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnMinimize, "btnMinimize");
             this.btnMinimize.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnMinimize.BackColor = System.Drawing.Color.Transparent;
-            this.btnMinimize.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.MasterSprite;
+            this.btnMinimize.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.MasterSprite;
             this.btnMinimize.ButtonImageOffset = new System.Drawing.Point(580, 288);
             this.btnMinimize.Name = "btnMinimize";
             this.btnMinimize.TabStop = false;
@@ -424,7 +424,7 @@ namespace MicrosoftStore.IsoTool
             resources.ApplyResources(this.btnClose, "btnClose");
             this.btnClose.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
             this.btnClose.BackColor = System.Drawing.Color.Transparent;
-            this.btnClose.ButtonImage = global::MicrosoftStore.IsoTool.Properties.Resources.MasterSprite;
+            this.btnClose.ButtonImage = global::Phrosty.IsoTool.Properties.Resources.MasterSprite;
             this.btnClose.ButtonImageOffset = new System.Drawing.Point(568, 288);
             this.btnClose.Name = "btnClose";
             this.btnClose.TabStop = false;
@@ -444,7 +444,7 @@ namespace MicrosoftStore.IsoTool
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.LavenderBlush;
-            this.BackgroundImage = global::MicrosoftStore.IsoTool.Properties.Resources.MasterSprite;
+            this.BackgroundImage = global::Phrosty.IsoTool.Properties.Resources.MasterSprite;
             resources.ApplyResources(this, "$this");
             this.Controls.Add(this.imgMediaImage);
             this.Controls.Add(this.lblScreenTitle);

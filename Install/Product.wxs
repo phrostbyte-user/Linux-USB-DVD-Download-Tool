@@ -94,7 +94,7 @@
                        <!-- <File Id="Source" Source="$(var.MainProject.ProjectDir)..\wudtsource.zip" /> -->
                             <File Id="IoWrapperDll" Source="$(var.MainProject.TargetDir)IoWrapper.dll" />
                         <?if $(var.Configuration) = Debug ?>
-                            <File Id="ToolExeDebugSymbols" Source="$(var.MainProject.TargetDir)Windows7-USB-DVD-Download-Tool.pdb"></File>
+     <!--                     <File Id="ToolExeDebugSymbols" Source="$(var.MainProject.TargetDir)Windows7-USB-DVD-Download-Tool.pdb"></File> -->
                         <?endif ?>
 
                             <RegistryKey Root="HKCU" Key="SOFTWARE\Microsoft\ISO Backup Tool">

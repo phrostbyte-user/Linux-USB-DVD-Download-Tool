@@ -14,7 +14,7 @@
 //     51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
 // </copyright>
 
-namespace MicrosoftStore.IsoTool
+namespace Phrosty.IsoTool
 {
     partial class ProgressBar
     {

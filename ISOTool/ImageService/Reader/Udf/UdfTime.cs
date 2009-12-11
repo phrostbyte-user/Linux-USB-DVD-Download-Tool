@@ -2,7 +2,7 @@
 
 using System;
 
-namespace MicrosoftStore.IsoTool.Service {
+namespace Phrosty.IsoTool.Service {
     internal class UdfTime {
         private byte[] Data = new byte[12];
 

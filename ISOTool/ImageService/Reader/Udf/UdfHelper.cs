@@ -2,7 +2,7 @@
 
 using System.IO;
 
-namespace MicrosoftStore.IsoTool.Service
+namespace Phrosty.IsoTool.Service
 {
     internal static class UdfHelper
     {

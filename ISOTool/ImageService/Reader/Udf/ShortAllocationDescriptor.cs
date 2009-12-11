@@ -1,6 +1,6 @@
 // This file was modified in September, 2009
 
-namespace MicrosoftStore.IsoTool.Service
+namespace Phrosty.IsoTool.Service
 {
     internal class ShortAllocationDescriptor {
         public int Length { get; private set; }

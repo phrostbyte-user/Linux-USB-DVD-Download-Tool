@@ -2,7 +2,7 @@
 
 using System.Collections.Generic;
 
-namespace MicrosoftStore.IsoTool.Service {
+namespace Phrosty.IsoTool.Service {
     internal class LogicalVolume {
         public UdfString128 Id { get; private set; }
 

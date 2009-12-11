@@ -1,6 +1,6 @@
 // This file was modified in September, 2009
 
-namespace MicrosoftStore.IsoTool.Service
+namespace Phrosty.IsoTool.Service
 {
     internal class UdfFileInformation {
         private const byte FILEID_CHARACS_Parent = (1 << 3);

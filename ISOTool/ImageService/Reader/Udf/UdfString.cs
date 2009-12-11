@@ -4,7 +4,7 @@ using System;
 using System.IO;
 using System.Text;
 
-namespace MicrosoftStore.IsoTool.Service {
+namespace Phrosty.IsoTool.Service {
     internal class UdfString {
         internal byte[] Data;
         internal byte type;
