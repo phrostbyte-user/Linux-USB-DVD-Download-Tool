@@ -1,0 +1,16 @@
+# Visual Studio sure loves generating a ton of files
+*.obj
+*.exe
+*.dll
+*.pdb
+*.lib
+*.idb
+*.intermediate.manifest
+*.msi
+BuildLog.htm
+*.wixobj
+*.wixproj.FileList.txt
+*.user
+*.resources
+*.FileListAbsolute.txt
+*.ilk
