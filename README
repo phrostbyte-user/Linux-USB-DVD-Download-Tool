@@ -1,16 +1,29 @@
+Linux USB/DVD Download Tool
+
+==================
+ABOUT THIS PROGRAM
+==================
+
+The Linux USB/DVD Download Tool used a substantial amount of code
+from the Windows 7 USB/DVD Download Tool by Microsoft.
+
+The Windows 7 USB/DVD Download tool was originally downloaded from
+http://wudt.codeplex.com/
+
 For more information about the Windows 7 USB/DVD Download Tool, please see 
 http://store.microsoft.com/help/ISO-Tool. 
 
-
-The Windows 7 USD/DVD Download Tool uses material from ImageMaster, a .NET C#
+The Windows 7 USB/DVD Download Tool uses material from ImageMaster, a .NET C#
 application for reading and writing disc images (*.iso files).  ImageMaster 
 is licensed under the terms of the GPL.  For more information about ImageMaster,
 please see http://imagemaster.codeplex.com/.
 
-
 This project uses the WIX Votive plugin for Visual Studio 2008.  Please see
 http://wix.sourceforge.net/votive.html for installation instructions.
 
+==================
+BUILD INSTRUCTIONS
+==================
 
 To build in Visual Studio 2008:
 
