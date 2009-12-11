@@ -14,3 +14,6 @@ BuildLog.htm
 *.resources
 *.FileListAbsolute.txt
 *.ilk
+*.ncb
+*obj/*
+*bin/*
