@@ -15,5 +15,5 @@ BuildLog.htm
 *.FileListAbsolute.txt
 *.ilk
 *.ncb
-*obj/*
-*bin/*
+obj
+bin
