@@ -36,7 +36,7 @@ namespace MicrosoftStore.IsoTool.Service
         /// <summary>
         /// The client name to use for exclusive access to the DVD drive.
         /// </summary>
-        private const string ClientName = "MSStoreISOTool";
+        private const string ClientName = "MainProject";
 
         /// <summary>
         /// The currently active drive ID

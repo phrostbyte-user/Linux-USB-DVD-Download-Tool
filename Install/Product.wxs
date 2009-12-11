@@ -52,7 +52,7 @@
 
         <Property Id="ALLUSERS" Secure="yes"/>
 
-        <Icon Id="icons.exe" SourceFile="$(var.MSStoreISOTool.ProjectDir)..\$(var.Configuration)\dmcicons.dll" />
+        <Icon Id="icons.exe" SourceFile="$(var.MainProject.ProjectDir)..\$(var.Configuration)\dmcicons.dll" />
 
         <Directory Id="TARGETDIR" Name="SourceDir">
             <Directory Id="LocalAppDataFolder">
@@ -62,7 +62,7 @@
                     <?if $(var.Culture) != en-US ?>
                         <Directory Id="ResourcesDir" Name="$(var.Culture)">
                             <Component Id="ResourceComponent" DiskId="1" Guid="7121DF56-62B6-4761-B625-19C2E75A13EF">
-                                <File Id="ResourceDll" Source="$(var.MSStoreISOTool.TargetDir)$(var.Culture)\Windows7-USB-DVD-Download-Tool.resources.dll" />
+                                <File Id="ResourceDll" Source="$(var.MainProject.TargetDir)$(var.Culture)\Windows7-USB-DVD-Download-Tool.resources.dll" />
 
                                 <RegistryKey Root="HKCU" Key="SOFTWARE\Microsoft\ISO Backup Tool">
                                     <RegistryValue Name="Version" Value="[ProductVersion]" Type="string" KeyPath="yes" />
@@ -73,7 +73,7 @@
                         </Directory>
                     <?endif ?>
                         <Component Id="IsoToolComponent" DiskId="1" Guid="DD1210CC-2CFE-403c-B7B4-E72C7D75E8F5">
-                            <File Id="ToolExe" Source="$(var.MSStoreISOTool.TargetPath)">
+                            <File Id="ToolExe" Source="$(var.MainProject.TargetPath)">
                                 <Shortcut Id="StartMenuShortcut"
                                           Name="!(loc.ShortcutName)"
                                           Directory="ShortcutFolder"
@@ -88,12 +88,13 @@
                                           Description="!(loc.ShortcutDescription)"
                                           Icon="icons.exe" />
                             </File>
-                            <File Id="Readme" Source="$(var.MSStoreISOTool.ProjectDir)README" ReadOnly="yes" />
-                            <File Id="License" Source="$(var.MSStoreISOTool.ProjectDir)COPYING" ReadOnly="yes" />
-                            <File Id="Source" Source="$(var.MSStoreISOTool.ProjectDir)..\wudtsource.zip" />
-                            <File Id="IoWrapperDll" Source="$(var.MSStoreISOTool.TargetDir)IoWrapper.dll" />
+                            <File Id="Readme" Source="$(var.MainProject.ProjectDir)README" ReadOnly="yes" />
+                            <File Id="License" Source="$(var.MainProject.ProjectDir)COPYING" ReadOnly="yes" />
+                            <!-- TODO: Figure out how to properly build an installer without this line -->
+                       <!-- <File Id="Source" Source="$(var.MainProject.ProjectDir)..\wudtsource.zip" /> -->
+                            <File Id="IoWrapperDll" Source="$(var.MainProject.TargetDir)IoWrapper.dll" />
                         <?if $(var.Configuration) = Debug ?>
-                            <File Id="ToolExeDebugSymbols" Source="$(var.MSStoreISOTool.TargetDir)Windows7-USB-DVD-Download-Tool.pdb"></File>
+                            <File Id="ToolExeDebugSymbols" Source="$(var.MainProject.TargetDir)Windows7-USB-DVD-Download-Tool.pdb"></File>
                         <?endif ?>
 
                             <RegistryKey Root="HKCU" Key="SOFTWARE\Microsoft\ISO Backup Tool">

@@ -29,13 +29,6 @@
     <Compile Include="Product.wxs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ISOTool\MSStoreISOTool.csproj">
-      <Name>MSStoreISOTool</Name>
-      <Project>{18dd7489-77d0-43d4-b7b1-672bdd804e2c}</Project>
-      <Private>True</Private>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <WixExtension Include="WixNetFxExtension">
       <HintPath>$(WixExtDir)\WixNetFxExtension.dll</HintPath>
     </WixExtension>
@@ -58,6 +51,13 @@
   <ItemGroup>
     <Content Include="CreateLocalizedInstallers.cmd" />
     <Content Include="CreateSelfExtractingInstallers.cmd" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ISOTool\MainProject.csproj">
+      <Name>MainProject</Name>
+      <Project>{18dd7489-77d0-43d4-b7b1-672bdd804e2c}</Project>
+      <Private>True</Private>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(WixTargetsPath)" />
 </Project>
