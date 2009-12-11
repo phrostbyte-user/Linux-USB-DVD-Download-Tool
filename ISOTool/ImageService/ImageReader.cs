@@ -108,7 +108,7 @@ namespace MicrosoftStore.IsoTool.Service
                     UdfFileExtent extentVds = this.ReadAnchorVolumePointer();
                     if (extentVds == null)
                     {
-                        return false;
+                        return true;
                     }
 
                     // Parse the volume and paritiotion information from the image.
