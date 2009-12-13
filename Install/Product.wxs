@@ -73,7 +73,8 @@
                         </Directory>
                     <?endif ?>
                         <Component Id="IsoToolComponent" DiskId="1" Guid="DD1210CC-2CFE-403c-B7B4-E72C7D75E8F5">
-                            <File Id="ToolExe" Source="$(var.MainProject.TargetPath)">
+<!-- TODO: Figure out why WiX keeps breaking for no apperent reason -->
+ <!--                         <File Id="ToolExe" Source="$(var.MainProject.TargetPath)">
                                 <Shortcut Id="StartMenuShortcut"
                                           Name="!(loc.ShortcutName)"
                                           Directory="ShortcutFolder"
@@ -87,7 +88,7 @@
                                           WorkingDirectory="INSTALLDIR"
                                           Description="!(loc.ShortcutDescription)"
                                           Icon="icons.exe" />
-                            </File>
+                            </File> -->
                             <File Id="Readme" Source="$(var.MainProject.ProjectDir)README" ReadOnly="yes" />
                             <File Id="License" Source="$(var.MainProject.ProjectDir)COPYING" ReadOnly="yes" />
                             <!-- TODO: Figure out how to properly build an installer without this line -->

@@ -28,6 +28,9 @@ namespace Phrosty.IsoTool.Service
 
     using Presenter;
 
+    // INFO: Windows specific namespace.
+    using Phrosty.IsoTool.Platform.Windows;
+
     /// <summary>
     /// Service to handle interaction with a USB drive.
     /// </summary>
@@ -158,12 +161,14 @@ namespace Phrosty.IsoTool.Service
         {
             // Check registry key value to determine whether to skip formatting.
             int regValue;
+
+            // TODO: Remove Win32 relience
             RegistryKey registryKey = Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\ISO Backup Tool");
             if (registryKey == null
                 || !Int32.TryParse(registryKey.GetValue("DisableFormat", 0).ToString(), out regValue)
                 || regValue == 0)
             {
-                int result = NativeMethods.FormatDrive(this.ActiveDrive.Name);
+                int result = PInvoke.FormatDrive(this.ActiveDrive.Name);
                 if (result != 0)
                 {
                     throw new IOException(String.Format(CultureInfo.InvariantCulture,
@@ -177,7 +182,7 @@ namespace Phrosty.IsoTool.Service
         /// </summary>
         private void SetActivePartition()
         {
-            int result = NativeMethods.SetActivePartition(this.ActiveDrive.Name);
+            int result = PInvoke.SetActivePartition(this.ActiveDrive.Name);
             if (result != 0)
             {
                 throw new IOException(String.Format(CultureInfo.InvariantCulture, "Unable to set active partition. Return code {0}.", result));
@@ -256,28 +261,6 @@ namespace Phrosty.IsoTool.Service
             {
                 this.Logging.Write("Bootloader file not found.  Skipping.");
             }
-        }
-
-        /// <summary>
-        /// Native methods for interacting with low level IO.
-        /// </summary>
-        private static class NativeMethods
-        {
-            /// <summary>
-            /// Sets the active partition.
-            /// </summary>
-            /// <param name="drive">The root path of the drive to update.</param>
-            /// <returns>Returns 0 for success.  See System Error Codes for possible error values.</returns>
-            [DllImport("IoWrapper.dll", CharSet = CharSet.Auto)]
-            public static extern int SetActivePartition([In, MarshalAs(UnmanagedType.LPWStr)] string drive);
-
-            /// <summary>
-            /// Formats the drive.
-            /// </summary>
-            /// <param name="drive">The root path of the drive to update.</param>
-            /// <returns>Returns 0 for success.  See System Error Codes for possible error values.</returns>
-            [DllImport("IoWrapper.dll", CharSet = CharSet.Auto)]
-            public static extern int FormatDrive([In, MarshalAs(UnmanagedType.LPWStr)] string drive);
         }
     }
 }

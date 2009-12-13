@@ -31,6 +31,9 @@ namespace Phrosty.IsoTool
 
     using Service;
 
+    // INFO: Windows specific namespace.
+    using Phrosty.IsoTool.Platform.Windows;
+
     /// <summary>
     /// The main application form.
     /// </summary>
@@ -91,13 +94,13 @@ namespace Phrosty.IsoTool
                 // For XP and 2003 use the WM_POWERBROADCAST message in WinProc
                 if (value)
                 {
-                    NativeMethods.SetThreadExecutionState(
-                        NativeMethods.EXECUTION_STATE.ES_CONTINUOUS | NativeMethods.EXECUTION_STATE.ES_SYSTEM_REQUIRED
-                        | NativeMethods.EXECUTION_STATE.ES_AWAYMODE_REQUIRED);
+                    PInvoke.SetThreadExecutionState(
+                        PInvoke.EXECUTION_STATE.ES_CONTINUOUS | PInvoke.EXECUTION_STATE.ES_SYSTEM_REQUIRED
+                        | PInvoke.EXECUTION_STATE.ES_AWAYMODE_REQUIRED);
                 }
                 else
                 {
-                    NativeMethods.SetThreadExecutionState(NativeMethods.EXECUTION_STATE.ES_CONTINUOUS);
+                    PInvoke.SetThreadExecutionState(PInvoke.EXECUTION_STATE.ES_CONTINUOUS);
                 }
 
                 this.disableStandby = value;
@@ -391,7 +394,7 @@ namespace Phrosty.IsoTool
         protected override void WndProc(ref Message m)
         {
             // Check for autoplay message and disable it.  Only works when the main window is in focus.
-            if (m.Msg == NativeMethods.QueryCancelAutoPlay)
+            if (m.Msg == PInvoke.QueryCancelAutoPlay)
             {
                 m.Result = new IntPtr(1);
                 return;
@@ -400,11 +403,11 @@ namespace Phrosty.IsoTool
             base.WndProc(ref m);
 
             // Disable standby (used for XP and 2003 only.  Vista and higher uses the SetThreadExecutionState method).
-            if (this.DisableStandby && m.Msg == NativeMethods.WM_POWERBROADCAST && m.WParam.ToInt32() == NativeMethods.PBT_APMQUERYSUSPEND)
+            if (this.DisableStandby && m.Msg == PInvoke.WM_POWERBROADCAST && m.WParam.ToInt32() == PInvoke.PBT_APMQUERYSUSPEND)
             {
                 // LParam value indicates whether the user can be prompted about pending standby (e.g. if the user closes the laptop
                 // lid a prompt doesn't help).  Allow susped to happen in this case since we only want to disable the automatic suspend.
-                m.Result = m.LParam.ToInt32() == 0x1 ? new IntPtr(NativeMethods.BROADCAST_QUERY_DENY) : new IntPtr(1);
+                m.Result = m.LParam.ToInt32() == 0x1 ? new IntPtr(PInvoke.BROADCAST_QUERY_DENY) : new IntPtr(1);
             }
         }
 
@@ -620,8 +623,8 @@ namespace Phrosty.IsoTool
             // Allow entire form to be dragable
             if (e.Button == MouseButtons.Left)
             {
-                NativeMethods.ReleaseCapture();
-                NativeMethods.SendMessage(this.Handle, NativeMethods.WM_NCLBUTTONDOWN, new IntPtr(NativeMethods.HT_CAPTION), new IntPtr(0));
+                PInvoke.ReleaseCapture();
+                PInvoke.SendMessage(this.Handle, PInvoke.WM_NCLBUTTONDOWN, new IntPtr(PInvoke.HT_CAPTION), new IntPtr(0));
             }
         }
 
@@ -637,67 +640,5 @@ namespace Phrosty.IsoTool
             e.Graphics.DrawLine(pen, 31, 139, 536, 139);
         }
         #endregion
-
-        /// <summary>
-        /// Native methods for interacting with Win32 methods.
-        /// </summary>
-        private static class NativeMethods
-        {
-            public const int PBT_APMQUERYSUSPEND = 0x0;
-            public const int BROADCAST_QUERY_DENY = 0x424D5144;
-            public const int WM_NCLBUTTONDOWN = 0xA1;
-            public const int HT_CAPTION = 0x2;
-
-            public static readonly int QueryCancelAutoPlay = RegisterWindowMessage("QueryCancelAutoPlay");
-            public static readonly int WM_POWERBROADCAST = RegisterWindowMessage("WM_POWERBROADCAST");
-
-            /// <summary>
-            /// Exectuion state enum for disabling standby.
-            /// </summary>
-            [Flags]
-            public enum EXECUTION_STATE : uint
-            {
-                ES_AWAYMODE_REQUIRED = 0x00000040,
-                ES_CONTINUOUS = 0x80000000,
-                ES_DISPLAY_REQUIRED = 0x00000002,
-                ES_SYSTEM_REQUIRED = 0x00000001,
-                ES_USER_PRESENT = 0x00000004,
-            }
-
-            /// <summary>
-            /// The send message method for allowing the window to be dragable.
-            /// </summary>
-            /// <param name="hWnd">The window handle.</param>
-            /// <param name="msg">The message to send.</param>
-            /// <param name="wParam">The wParam value.</param>
-            /// <param name="lParam">The lParam value.</param>
-            /// <returns>The hResult of the call.</returns>
-            [DllImport("user32.dll")]
-            public static extern IntPtr SendMessage(IntPtr hWnd, int msg, IntPtr wParam, IntPtr lParam);
-
-            /// <summary>
-            /// Releases the window caputre.
-            /// </summary>
-            /// <returns>True on success.</returns>
-            [DllImport("user32.dll")]
-            [return: MarshalAs(UnmanagedType.Bool)]
-            public static extern bool ReleaseCapture();
-
-            /// <summary>
-            /// Sets the execution state for allowing the tool to disable standby (Vista and higher).
-            /// </summary>
-            /// <param name="esFlags">The flags indicating the thread execution state.</param>
-            /// <returns>The execution state that was set.</returns>
-            [DllImport("kernel32.dll")]
-            public static extern EXECUTION_STATE SetThreadExecutionState(EXECUTION_STATE esFlags);
-
-            /// <summary>
-            /// Gets the integer value for the given window message.
-            /// </summary>
-            /// <param name="msgString">The window message to lookup.</param>
-            /// <returns>The integer value for the message.</returns>
-            [DllImport("user32", CharSet = CharSet.Auto)]
-            private static extern int RegisterWindowMessage([In, MarshalAs(UnmanagedType.LPWStr)] string msgString);
-        }
     }
 }
